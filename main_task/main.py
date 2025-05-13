@@ -2,6 +2,7 @@ import timeit
 import random
 from utilities import insertion_sort, merge_sort
 
+
 def analyzing_func(not_sorted_data, sort_func, func_name):
     start_time = timeit.default_timer()
     sorted_data = sort_func(not_sorted_data)
@@ -9,6 +10,7 @@ def analyzing_func(not_sorted_data, sort_func, func_name):
     duration = end_time - start_time
     print(f'- {func_name} - {duration}')
     return duration
+
 
 def experiment(not_sorted_data_set):
     print(f'Duration of sorting by function:')
