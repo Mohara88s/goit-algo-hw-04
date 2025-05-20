@@ -14,13 +14,13 @@ def analyzing_func(not_sorted_data, sort_func, func_name):
 
 def experiment(not_sorted_data_set):
     print(f'Duration of sorting by function:')
-    test_sorted = analyzing_func(not_sorted_data_set, sorted, 'SORTED')
-    test_insertion_sort = analyzing_func(not_sorted_data_set, insertion_sort, 'INSERTION SORT')
-    test_merge_sort = analyzing_func(not_sorted_data_set, merge_sort, 'MERGE SORT')
+    test_sorted = analyzing_func(not_sorted_data_set.copy(), sorted, 'SORTED')
+    test_insertion_sort = analyzing_func(not_sorted_data_set.copy(), insertion_sort, 'INSERTION SORT')
+    test_merge_sort = analyzing_func(not_sorted_data_set.copy(), merge_sort, 'MERGE SORT')
 
     print('The current experiment shows that:')
-    print(f' - SORTED is {test_insertion_sort/test_sorted} times faster than INSERTION SORT')
-    print(f' - SORTED is {test_merge_sort/test_sorted} times faster than MERGE SORT')
+    print(f' - INSERTION SORT is {test_insertion_sort/test_sorted} times slower than SORTED')
+    print(f' - MERGE SORT is {test_merge_sort/test_sorted} times slower than SORTED')
 
 
 def main():
